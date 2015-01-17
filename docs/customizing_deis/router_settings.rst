@@ -105,5 +105,8 @@ The :ref:`router` will pick up the IP information and forward it to the applicat
 ``X-Forwarded-For`` header.
 
 Load Balancers supporting the HTTP protocol may not need this, except in cases where one would run
-WebSockets on a Load Balancer without support for WebSockets (for example AWS ELB) and one also
-wants to know the IP address of the original request.
+:ref:`WebSockets <configure-websockets>` on a Load Balancer without support for WebSockets
+(for example AWS ELB) and one also wants to know the IP address of the original request.
+
+The :ref:`configure WebSockets <configure-websockets>` guide provides instructions on how to set up
+WebSockets and the PROXY Protocol on AWS and other platforms.
