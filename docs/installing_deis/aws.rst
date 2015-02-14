@@ -103,6 +103,10 @@ in `cloudformation.json`_. For example, to configure all of the optional setting
     {
         "ParameterKey":     "ELBScheme",
         "ParameterValue":   "internal"
+    },
+    {
+        "ParameterKey":     "ExtraTCPELB",
+        "ParameterValue":   "true"
     }
 
 
