@@ -405,11 +405,15 @@
   },
   "Outputs" : {
     "DNSName" : {
-      "Description" : "DNS Name of the HTTP ELB",
+      "Description" : "(Deprecated) DNS Name of Deis Web ELB",
       "Value" :  { "Fn::GetAtt" : ["DeisWebELB", "DNSName"] }
     },
-    "TCPELBName" : {
-      "Description" : "DNS Name of the TCP ELB",
+    "WebELBDNSName" : {
+        "Description" : "DNS Name of Deis Web ELB",
+        "Value" :  { "Fn::GetAtt" : ["DeisWebELB", "DNSName"] }
+    },
+    "TCPELBELBName" : {
+      "Description" : "DNS Name of Deis TCP ELB",
       "Condition" : "CreateExtraTCPELB",
       "Value" : { "Fn::GetAtt" : ["DeisTCPELB", "DNSName"] }
     }
